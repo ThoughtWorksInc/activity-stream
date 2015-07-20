@@ -1,4 +1,4 @@
-# Prototyper
+# ActivityStream
 
 
 ## Getting started
@@ -37,4 +37,4 @@ gulp deploy
 
 ###Visit:
 
-[username.github.io/repo-name](http://username.github.io/repo-name/)
+[thoughtworksinc.github.io/activity-stream](http://thoughtworksinc.github.io/activity-stream)
