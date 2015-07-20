@@ -1,5 +1,3 @@
-// inspired by https://gist.github.com/dmitruksergey/8441752
-
 var gulp = require('gulp'),
     jade = require('gulp-jade'),
     sass = require('gulp-sass'),
@@ -15,7 +13,7 @@ var gulp = require('gulp'),
     ghPages = require('gulp-gh-pages');
 
 var isDev = false;
-var output_path = 'public';
+var output_path = 'resources/public';
 var deployed_path = 'deployed';
 var dev_path = {
   sass: ['assets/stylesheets/*.scss', '!assets/stylesheets/_*.scss'],
@@ -117,7 +115,7 @@ gulp.task('url', function () {
     url: 'http://localhost:' + dev_path.port + '/',
     app: 'safari'
   };
-  gulp.src('./public/index.html') // An actual file must be specified or gulp will overlook the task.
+  gulp.src('./resources/public/index.html') // An actual file must be specified or gulp will overlook the task.
       .pipe(open('<%file.path%>', options));
 });
 
@@ -151,7 +149,7 @@ gulp.task('build', function (callback) {
 });
 
 gulp.task('ghpages', function() {
-  return gulp.src('./public/**/*')
+  return gulp.src('./resources/public/**/*')
       .pipe(ghPages({cacheDir:deployed_path}));
 });
 
