@@ -4,12 +4,12 @@ var app = express();
 app.set('port', (process.env.PORT || 7070));
 
 var pageData = {
-  "javascriptsBase": "/assets/javascripts",
-  "stylesheetsBase": "/assets/stylesheets",
-  "imagesBase": "/assets/images"
+  "javascriptsBase": "/javascripts",
+  "stylesheetsBase": "/stylesheets",
+  "imagesBase": "/images"
 };
 
-app.use('/assets', express.static(__dirname + '/public'));
+app.use('/', express.static(__dirname + '/resources/public'));
 
 app.set('view engine', 'jade');
 app.set('views', './assets/jade');
