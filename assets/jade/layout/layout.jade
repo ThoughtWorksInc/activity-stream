@@ -21,5 +21,13 @@ html
     block headerScripts
 
   body(class="#{bodyClass}")
-    block content
+
+    header.header
+      .header__logo
+        span.logo__activity Activity
+        span.logo__stream Stream
+
+    main.main-content(role="main")
+      block content
+
     block footerScripts
