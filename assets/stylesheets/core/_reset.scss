@@ -431,6 +431,7 @@ html {
 
 body {
   @include font-smoothing(on);
+  text-rendering: optimizeLegibility;
   color: $default_text_color;
   font-family: $para_font_family;
   font-size: 16px;
